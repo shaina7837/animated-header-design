@@ -1,0 +1,130 @@
+.outer-header {
+	
+	top: 0;		
+	left: 0;
+	width: 100%;
+	background: #f6f6f6;
+	z-index: 10000;
+	height: 230px;
+	overflow: hidden;
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+}
+
+.outer-header .inner-header {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 0 1.875em;
+}
+
+.outer-header h1,
+.outer-header nav {
+	display: inline-block;
+	position: relative;
+}
+
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.outer-header h1,
+.outer-header nav a {
+	line-height: 230px;
+}
+
+.outer-header h1 {
+	text-transform: uppercase;
+	color: #333;
+	letter-spacing: 4px;
+	font-size: 4em;
+	margin: 0;
+	float: left;
+}
+
+.outer-header nav {
+	float: right;
+}
+
+.outer-header nav a {
+	color: #aaa;
+	font-weight: 700;
+	margin: 0 0 0 20px;
+	font-size: 1.4em;
+}
+
+.outer-header nav a:hover {
+	color: #333;
+}
+
+/* Transitions and class for reduced height */
+.outer-header h1,
+.outer-header nav a {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.outer-header.outer-header-shrink {
+	top: 0;
+	position: fixed;
+	height: 90px;
+}
+
+.outer-header.outer-header-shrink h1,
+.outer-header.outer-header-shrink nav a {
+	line-height: 90px;
+}
+
+.outer-header.outer-header-shrink h1 {
+	font-size: 2em;
+}
+
+/* Example Media Queries */
+@media screen and (max-width: 55em) {
+	
+	.outer-header .inner-header {
+		width: 100%;
+	}
+
+	.outer-header h1,
+	.outer-header nav {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		float: none;
+	}
+
+	.outer-header h1,
+	.outer-header nav a {
+		line-height: 115px;
+	}
+
+	.outer-header nav a {
+		margin: 0 10px;
+	}
+
+	.outer-header.outer-header-shrink h1,
+	.outer-header.outer-header-shrink nav a {
+		line-height: 45px;
+	}
+
+	.outer-header.outer-header-shrink h1 {
+		font-size: 2em;
+	}
+
+	.outer-header.outer-header-shrink nav a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 32.25em) {
+	.outer-header nav a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 24em) {
+	.outer-header nav a,
+	.outer-header.outer-header-shrink nav a {
+		line-height: 1;
+	}
+}
